@@ -1,8 +1,10 @@
 services:
   postgres:
     image: postgres
+    container_name: auctions-db
     environment:
       - POSTGRES_PASSWORD=postgrespw
+      - POSTGRES_DB=auctions
     ports:
       - 5432:5432
     volumes:
